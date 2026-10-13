@@ -1,0 +1,34 @@
+# Python virtual environments & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Analytical Database & Raw Datasets (Do NOT commit large data files to Git)
+data/raw/*.csv
+data/raw/*.zip
+data/*.duckdb*
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp
+
+# Environment variables & secrets
+.env
+
+# Testing & Caching
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep directory structures intact in Git
+!data/raw/.gitkeep
+!outputs/.gitkeep
+!reports/charts/.gitkeep

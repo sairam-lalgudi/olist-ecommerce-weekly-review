@@ -1,0 +1,15 @@
+# Core Analytical Database & Querying
+duckdb>=1.0.0
+
+# Supporting Data Manipulation (for charts and report generation only)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualizations & PDF Report Generation
+matplotlib>=3.8.0
+reportlab>=4.0.0
+Pillow>=10.0.0
+
+# Testing & Environment
+pytest>=8.0.0
+python-dotenv>=1.0.0

@@ -1,0 +1,8 @@
+check_name,severity,failed_rows,status,description,remediation
+check_3_payment_vs_items_freight,INFORMATIONAL,0,PASS,Informational: Compares order gross value with customer payment gateway total,Flag orders in mart (has_payment_discrepancy=TRUE); audit installment interest and vouchers
+check_5_invalid_review_scores,INFORMATIONAL,0,PASS,Informational: Verifies review scores adhere to the 1-5 rating scale,Flag records; impute NULL or quarantine malformed feedback entries
+check_7_delivered_before_carrier,INFORMATIONAL,0,PASS,Informational: Logistics chronological check for carrier dispatched vs delivered,Flag logistics tracking anomaly; investigate postal barcode scan synchronization lag
+check_2_delivered_before_purchase,CRITICAL,1,FAIL,Critical: Chronological integrity checking if delivery predates order purchase,Stop pipeline; flag upstream event stream or time synchronization drift
+check_1_null_or_duplicate_order_id,CRITICAL,0,PASS,Critical: Ensures primary key uniqueness and non-null constraint on orders,Stop pipeline immediately; inspect source extraction for duplicate order keys
+check_4_orders_without_customer,CRITICAL,0,PASS,Critical: Referential integrity ensuring every order maps to a known customer,Stop pipeline; repair orphan orders or customer ingestion dimension table
+check_6_negative_item_prices,CRITICAL,0,PASS,Critical: Ensures price > 0 and freight >= 0 for all purchased line items,Stop pipeline; investigate billing or pricing corruption in line item feed

@@ -1,0 +1,6 @@
+delay_bucket,on_time_category,total_orders,order_share_pct,avg_delay_days,avg_review_score,pct_5_star_reviews,pct_1_star_reviews
+1. >7 days early,On-Time or Early,70900,73.99,-15.16,4.32,63.58,6.44
+2. 1-7 days early,On-Time or Early,17253,18.0,-4.17,4.2,57.45,7.04
+3. On estimated date,On-Time or Early,16,0.02,0.0,4.31,62.5,6.25
+4. 1-7 days late,Late,4407,4.6,2.9,3.18,33.04,29.57
+5. >7 days late,Late,3248,3.39,18.34,1.73,7.45,68.66

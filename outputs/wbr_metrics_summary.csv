@@ -1,0 +1,7 @@
+metric_name,value,formula_or_ratio,grain
+"Net Marketplace GMV","R$ 15,735,527.03","SUM(price + freight)","Completed Orders"
+"Average Order Value (AOV)","R$ 160.23","Net GMV / Orders","Completed Orders"
+"Repeat Purchase Rate","3.04%","2,888 / 94,990","customer_unique_id"
+"On-Time Delivery Rate","91.89%","88,650 / 96,470","Delivered Orders"
+"Severe Delay Rate (>7d Late)","3.46%","3,341 / 96,470","Delivered Orders"
+"Average Review Score (CSAT)","4.09 / 5.00","AVG(review_score)","Reviewed Orders"

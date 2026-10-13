@@ -1,0 +1,57 @@
+{
+  "north_star_metric": {
+    "name": "Net Marketplace GMV",
+    "value": "R$ 15,735,527.03",
+    "numeric_value": 15735527.03,
+    "grain": "Aggregated completed orders",
+    "formula": "SUM(item_price + freight_value) for order_status NOT IN ('canceled', 'unavailable')",
+    "justification": "Primary indicator of platform commercial throughput and scale."
+  },
+  "average_order_value": {
+    "name": "Average Order Value (AOV)",
+    "value": "R$ 160.23",
+    "numeric_value": 160.23,
+    "formula": "Net GMV / Total Completed Orders"
+  },
+  "repeat_purchase_rate": {
+    "name": "Customer Repeat Purchase Rate",
+    "value": "3.04%",
+    "numeric_value": 3.04,
+    "numerator": 2888,
+    "denominator": 94990,
+    "grain": "Unique Customer (customer_unique_id)",
+    "formula": "(Unique Customers with >=2 Orders / Total Unique Customers) * 100",
+    "justification": "Gauges long-term retention and organic loyalty vs high single-order churn."
+  },
+  "on_time_delivery_rate": {
+    "name": "On-Time Delivery Rate",
+    "value": "91.89%",
+    "numeric_value": 91.89,
+    "numerator": 88650,
+    "denominator": 96470,
+    "grain": "Delivered Order",
+    "formula": "(Orders with delivery_delay_days <= 0 / Total Delivered Orders) * 100",
+    "justification": "Core logistics SLA reflecting fulfillment against customer commitment date."
+  },
+  "severe_delay_rate": {
+    "name": "Severe Delay Rate (>7 Days Late)",
+    "value": "3.46%",
+    "numeric_value": 3.46,
+    "numerator": 3341,
+    "denominator": 96470,
+    "grain": "Delivered Order",
+    "formula": "(Orders with delivery_delay_days > 7 / Total Delivered Orders) * 100",
+    "justification": "Operational guardrail metric tracking the primary driver of 1-star reviews."
+  },
+  "average_csat": {
+    "name": "Average Review Score (CSAT)",
+    "value": "4.09 / 5.00",
+    "numeric_value": 4.09,
+    "reviewed_orders": 98673,
+    "pct_5_star": "57.72%",
+    "pct_1_star": "11.47%",
+    "grain": "Reviewed Order",
+    "formula": "AVG(review_score) across all reviewed orders",
+    "justification": "Direct voice-of-the-customer sentiment benchmark."
+  }
+}
